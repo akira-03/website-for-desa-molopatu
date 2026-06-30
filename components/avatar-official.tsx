@@ -20,9 +20,8 @@ export function AvatarOfficial({
   foto,
 }: AvatarOfficialProps) {
   return (
-    <div className="group flex flex-col items-center text-center transition-transform duration-300 hover:-translate-y-2">
-      {/* Avatar Circle */}
-      <div className={`animate-float relative mb-4 w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br ${warna} p-1 shadow-lg shadow-primary/20 group-hover:scale-105 group-hover:shadow-xl group-hover:shadow-primary/40 transition-all duration-300 overflow-hidden`}>
+    <div className="group w-full rounded-2xl border border-border/80 bg-white/95 p-6 text-center shadow-sm shadow-primary/5 transition-all duration-300 hover:-translate-y-2 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/10">
+      <div className={`animate-float relative mx-auto mb-5 h-32 w-32 overflow-hidden rounded-full bg-gradient-to-br ${warna} p-1 shadow-lg shadow-primary/20 transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl group-hover:shadow-primary/30 md:h-36 md:w-36`}>
         {foto ? (
           <Image
             src={foto}
@@ -40,10 +39,9 @@ export function AvatarOfficial({
         )}
       </div>
 
-      {/* Info */}
-      <h3 className="font-bold text-lg md:text-xl mb-1">{nama}</h3>
-      <p className="text-sm font-semibold text-primary mb-2">{posisi}</p>
-      <p className="text-sm text-muted-foreground max-w-xs leading-relaxed">
+      <h3 className="mb-1 text-lg font-bold md:text-xl">{nama}</h3>
+      <p className="mb-3 text-sm font-semibold text-primary">{posisi}</p>
+      <p className="mx-auto max-w-xs text-sm leading-relaxed text-muted-foreground">
         {deskripsi}
       </p>
     </div>

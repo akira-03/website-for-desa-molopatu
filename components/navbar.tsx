@@ -15,7 +15,7 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <nav className="animate-fade-down sticky top-0 z-50 border-b border-primary/30 bg-primary text-primary-foreground shadow-sm">
+    <nav className="animate-fade-down sticky top-0 z-50 border-b border-white/15 bg-primary/95 text-primary-foreground shadow-lg shadow-primary/10 backdrop-blur">
       <div className="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-16">
         <div className="flex h-20 items-center justify-between">
           <Link
@@ -30,17 +30,17 @@ export function Navbar() {
                 event.currentTarget.style.display = 'none'
               }}
             />
-            <span className="truncate text-2xl font-bold tracking-normal">
+            <span className="truncate text-xl font-bold tracking-normal sm:text-2xl">
               Desa Molopatodu
             </span>
           </Link>
 
-          <div className="hidden items-center gap-10 text-lg font-medium md:flex">
+          <div className="hidden items-center gap-2 text-base font-medium md:flex">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="relative transition hover:text-white after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+                className="rounded-lg px-4 py-2 transition hover:bg-white/15 hover:text-white"
               >
                 {item.label}
               </Link>

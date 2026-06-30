@@ -182,7 +182,7 @@ export default function KontakPage() {
 
                   {submitted && (
                     <div className="bg-gradient-to-r from-green-50 to-emerald-50 border border-green-300 text-green-700 px-5 py-4 rounded-xl text-sm font-medium animate-pulse">
-                      ✓ Pesan berhasil dikirim! Terima kasih telah menghubungi kami.
+                      Pesan berhasil dikirim. Terima kasih telah menghubungi kami.
                     </div>
                   )}
                 </form>

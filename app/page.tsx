@@ -48,19 +48,23 @@ export default function Home() {
       <Navbar />
 
       <main className="flex-1">
-        <section className="section-reveal relative flex min-h-[calc(100vh-5rem)] items-center overflow-hidden border-b border-primary/20 bg-white px-4 py-16">
+        <section className="section-reveal relative flex min-h-[calc(100vh-5rem)] items-center overflow-hidden border-b border-primary/20 bg-white px-4 py-20">
           <img
             src="/hero-desa-molopatodu.png"
             alt=""
             aria-hidden="true"
             className="absolute inset-0 h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/82 to-white/55" />
-          <div className="absolute inset-0 bg-primary/10" />
-          <div className="relative mx-auto grid w-full max-w-7xl items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
+          <div className="absolute inset-0 bg-gradient-to-r from-white/96 via-white/84 to-white/50" />
+          <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(15,118,110,0.18),rgba(37,99,235,0.08),rgba(255,255,255,0.35))]" />
+          <div className="relative mx-auto grid w-full max-w-7xl items-center gap-12 lg:grid-cols-[1fr_0.92fr]">
             <div className="animate-fade-right text-center lg:text-left">
+              <div className="animate-scale-in mb-6 inline-flex items-center gap-2 rounded-lg border border-primary/25 bg-white/85 px-4 py-2 text-sm font-semibold text-primary shadow-sm backdrop-blur">
+                <MapPin size={16} />
+                Website Resmi Desa Molopatodu
+              </div>
 
-              <h1 className="animate-fade-up animate-delay-100 mb-6 text-5xl font-bold leading-tight text-balance text-foreground md:text-7xl">
+              <h1 className="animate-fade-up animate-delay-100 mb-6 max-w-4xl text-5xl font-bold leading-tight text-balance text-foreground md:text-7xl">
                 Selamat Datang di Desa Molopatodu
               </h1>
 
@@ -70,18 +74,33 @@ export default function Home() {
                 diakses.
               </p>
 
-             
+              <div className="animate-fade-up animate-delay-300 flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
+                <Link
+                  href="/produk"
+                  className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-primary to-accent px-8 py-4 font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-primary/30"
+                >
+                  Lihat Produk
+                  <ArrowRight size={18} />
+                </Link>
+                <Link
+                  href="/berita"
+                  className="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-primary/70 bg-white/75 px-8 py-4 font-semibold text-primary shadow-sm backdrop-blur transition-all duration-300 hover:bg-primary/10"
+                >
+                  Baca Berita
+                  <Newspaper size={18} />
+                </Link>
+              </div>
             </div>
 
-            <div className="animate-fade-left animate-delay-200 mx-auto w-full max-w-md overflow-hidden rounded-lg border border-primary/25 bg-white/90 shadow-xl shadow-primary/10 lg:max-w-none">
-              <div className="relative h-72 overflow-hidden md:h-80">
+            <div className="animate-fade-left animate-delay-200 mx-auto w-full max-w-md overflow-hidden rounded-2xl border border-white/60 bg-white/90 shadow-2xl shadow-primary/20 backdrop-blur lg:max-w-none">
+              <div className="relative h-72 overflow-hidden md:h-96">
                 <img
                   src="/hero-desa-molopatodu.png"
                   alt="Pemandangan Desa Molopatodu"
                   className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-primary/10 to-transparent" />
-                <div className="absolute bottom-5 left-5 right-5 flex items-center gap-4 rounded-lg border border-white/35 bg-white/90 p-4 shadow-lg backdrop-blur">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-primary/10 to-transparent" />
+                <div className="absolute bottom-5 left-5 right-5 flex items-center gap-4 rounded-xl border border-white/40 bg-white/92 p-4 shadow-lg backdrop-blur">
                   <img
                     src="/logo-kabupaten-gorontalo.png"
                     alt="Logo Kabupaten Gorontalo"
@@ -99,19 +118,19 @@ export default function Home() {
               </div>
 
               <div className="grid gap-4 p-6 sm:grid-cols-3">
-                <div className="animate-scale-in animate-delay-300 rounded-lg bg-primary/10 p-4">
+                <div className="animate-scale-in animate-delay-300 rounded-xl border border-primary/10 bg-primary/10 p-4">
                   <p className="text-3xl font-bold text-primary">4</p>
                   <p className="text-sm text-muted-foreground">
                     Produk unggulan
                   </p>
                 </div>
-                <div className="animate-scale-in animate-delay-400 rounded-lg bg-secondary/20 p-4">
+                <div className="animate-scale-in animate-delay-400 rounded-xl border border-secondary/40 bg-secondary/25 p-4">
                   <p className="text-3xl font-bold text-primary">3</p>
                   <p className="text-sm text-muted-foreground">
                     Berita terbaru
                   </p>
                 </div>
-                <div className="animate-scale-in animate-delay-500 rounded-lg bg-accent/10 p-4">
+                <div className="animate-scale-in animate-delay-500 rounded-xl border border-accent/10 bg-accent/10 p-4">
                   <p className="text-3xl font-bold text-primary">1</p>
                   <p className="text-sm text-muted-foreground">
                     Peta lokasi
@@ -144,10 +163,10 @@ export default function Home() {
                 return (
                   <div
                     key={item.title}
-                    className="animate-fade-up hover-lift rounded-lg border border-border bg-card p-6 hover:border-primary/60 hover:shadow-xl hover:shadow-primary/10"
+                    className="animate-fade-up hover-lift rounded-2xl border border-border/80 bg-card/95 p-6 shadow-sm shadow-primary/5 hover:border-primary/60 hover:shadow-xl hover:shadow-primary/10"
                     style={{ animationDelay: `${index * 90}ms` }}
                   >
-                    <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/15 text-primary">
+                    <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary/20 to-secondary/30 text-primary">
                       <Icon size={24} />
                     </div>
                     <h3 className="mb-3 text-xl font-bold">{item.title}</h3>
@@ -161,7 +180,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section-reveal border-y border-primary/15 bg-primary/5 px-4 py-20 md:py-24">
+        <section className="section-reveal border-y border-primary/15 bg-gradient-to-b from-primary/5 via-secondary/15 to-primary/5 px-4 py-20 md:py-24">
           <div className="mx-auto max-w-7xl">
             <div className="animate-fade-up mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
               <div className="max-w-3xl">
@@ -191,10 +210,10 @@ export default function Home() {
                 <Link
                   key={product.id}
                   href={`/produk/${product.slug}`}
-                  className="animate-fade-up hover-lift group rounded-lg border border-border bg-white p-6 hover:border-primary/60 hover:shadow-xl hover:shadow-primary/10"
+                  className="animate-fade-up hover-lift group rounded-2xl border border-border/80 bg-white/95 p-6 shadow-sm shadow-primary/5 hover:border-primary/60 hover:shadow-xl hover:shadow-primary/10"
                   style={{ animationDelay: `${index * 90}ms` }}
                 >
-                  <div className="mb-5 flex h-16 w-16 items-center justify-center rounded-lg bg-primary/15 text-2xl font-bold text-primary">
+                  <div className="mb-5 flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br from-primary/15 to-secondary/30 text-2xl font-bold text-primary">
                     {product.image}
                   </div>
                   <p className="mb-2 text-sm font-semibold text-primary">
@@ -221,7 +240,9 @@ export default function Home() {
         <PetaDesaSection />
 
         <section className="section-reveal px-4 py-20 md:py-24">
-          <div className="animate-scale-in mx-auto max-w-5xl rounded-lg bg-gradient-to-r from-primary to-accent px-6 py-14 text-center text-primary-foreground md:px-12">
+          <div className="animate-scale-in relative mx-auto max-w-5xl overflow-hidden rounded-2xl bg-gradient-to-r from-primary via-primary to-accent px-6 py-14 text-center text-primary-foreground shadow-2xl shadow-primary/20 md:px-12">
+            <div className="absolute inset-0 bg-[url('/hero-desa-molopatodu.png')] bg-cover bg-center opacity-15" />
+            <div className="relative">
             <h2 className="mb-5 text-4xl font-bold text-balance md:text-5xl">
               Jelajahi produk dan kabar terbaru Desa Molopatodu
             </h2>
@@ -243,6 +264,7 @@ export default function Home() {
               >
                 Hubungi Kami
               </Link>
+            </div>
             </div>
           </div>
         </section>

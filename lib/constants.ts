@@ -44,7 +44,7 @@ export const DESA_CONFIG = {
   
   // Branding
   logo: 'M', // Inisial untuk logo
-  warnaPrimary: '#3b82f6', // Biru sedang — kontras jelas dengan putih
+  warnaPrimary: '#0f766e', // Hijau teal untuk identitas desa
 }
 
 // Struktur Aparat Desa
