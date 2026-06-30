@@ -1,6 +1,7 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
+import { RouteLoading } from '@/components/route-loading'
 import { ScrollReveal } from '@/components/scroll-reveal'
 import './globals.css'
 
@@ -50,6 +51,7 @@ export default function RootLayout({
     <html lang="id" className={`${geistSans.variable} ${geistMono.variable} bg-background`}>
       <body className="font-sans antialiased">
         {children}
+        <RouteLoading />
         <ScrollReveal />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

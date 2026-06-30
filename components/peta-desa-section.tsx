@@ -18,7 +18,7 @@ export function PetaDesaSection() {
             Temukan Kami di Peta
           </h2>
           <p className="animate-fade-up animate-delay-200 mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            Lokasi Desa Molopatodu yang mudah diakses dari berbagai tempat.
+            Lokasi Desa Molopatodu, Kecamatan Bongomeme, Kabupaten Gorontalo.
           </p>
         </div>
 
@@ -57,14 +57,14 @@ export function PetaDesaSection() {
                   <Compass className="h-6 w-6 text-primary" />
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-lg font-bold">Koordinat</h3>
+                  <h3 className="text-lg font-bold">Wilayah</h3>
                   <p className="text-sm text-muted-foreground">
-                    <strong className="text-foreground">Latitude:</strong>{' '}
-                    {PETA_CONFIG.lat}
+                    <strong className="text-foreground">Kecamatan:</strong>{' '}
+                    {PETA_CONFIG.kecamatan}
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    <strong className="text-foreground">Longitude:</strong>{' '}
-                    {PETA_CONFIG.lng}
+                    <strong className="text-foreground">Kabupaten:</strong>{' '}
+                    {PETA_CONFIG.kabupaten}
                   </p>
                 </div>
               </div>
@@ -87,7 +87,9 @@ export function PetaDesaSection() {
             </div>
 
             <a
-              href={`https://www.google.com/maps/search/${PETA_CONFIG.nama}`}
+              href={`https://www.google.com/maps/search/${encodeURIComponent(
+                PETA_CONFIG.mapsQuery
+              )}`}
               target="_blank"
               rel="noopener noreferrer"
               className="animate-fade-up animate-delay-300 inline-block w-full rounded-xl bg-gradient-to-r from-primary to-accent py-3 text-center font-semibold text-primary-foreground shadow-lg shadow-primary/15 transition-all duration-300 hover:scale-105 hover:shadow-primary/30"

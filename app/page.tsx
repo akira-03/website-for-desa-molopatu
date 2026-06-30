@@ -59,10 +59,6 @@ export default function Home() {
           <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(15,118,110,0.18),rgba(37,99,235,0.08),rgba(255,255,255,0.35))]" />
           <div className="relative mx-auto grid w-full max-w-7xl items-center gap-12 lg:grid-cols-[1fr_0.92fr]">
             <div className="animate-fade-right text-center lg:text-left">
-              <div className="animate-scale-in mb-6 inline-flex items-center gap-2 rounded-lg border border-primary/25 bg-white/85 px-4 py-2 text-sm font-semibold text-primary shadow-sm backdrop-blur">
-                <MapPin size={16} />
-                Website Resmi Desa Molopatodu
-              </div>
 
               <h1 className="animate-fade-up animate-delay-100 mb-6 max-w-4xl text-5xl font-bold leading-tight text-balance text-foreground md:text-7xl">
                 Selamat Datang di Desa Molopatodu

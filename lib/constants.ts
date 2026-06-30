@@ -7,7 +7,7 @@ export const DESA_CONFIG = {
   // Informasi Dasar Desa
   nama: 'Desa Molopatodu',
   deskripsi: 'Desa yang dikenal dengan produk olahan pangan berkualitas tinggi',
-  lokasi: 'Desa Molopatodu, Indonesia',
+  lokasi: 'Desa Molopatodu, Kecamatan Bongomeme, Kabupaten Gorontalo',
   
   // Tentang Desa
   tentang: {
@@ -87,15 +87,18 @@ export const APARAT_DESA = [
   }
 ]
 
-// Koordinat Peta Google Maps (Molopatodu - contoh)
+// Peta Google Maps Desa Molopatodu
 export const PETA_CONFIG = {
-  lat: -7.5500, // Latitude contoh
-  lng: 110.8167, // Longitude contoh
+  lat: 0.6650,
+  lng: 122.8450,
   zoom: 15,
   nama: 'Desa Molopatodu',
-  alamat: 'Desa Molopatodu, Indonesia',
+  kecamatan: 'Kecamatan Bongomeme',
+  kabupaten: 'Kabupaten Gorontalo',
+  alamat: 'Desa Molopatodu, Kecamatan Bongomeme, Kabupaten Gorontalo',
+  mapsQuery: 'Desa Molopatodu, Kecamatan Bongomeme, Kabupaten Gorontalo',
   embedUrl:
-    'https://maps.google.com/maps?q=-7.5500,110.8167&hl=id&z=15&output=embed',
+    'https://maps.google.com/maps?q=Desa%20Molopatodu%2C%20Kecamatan%20Bongomeme%2C%20Kabupaten%20Gorontalo&hl=id&z=15&output=embed',
 }
 
 // Export untuk kemudahan akses individual
