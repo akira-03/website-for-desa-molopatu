@@ -59,10 +59,6 @@ export default function Home() {
           <div className="absolute inset-0 bg-primary/10" />
           <div className="relative mx-auto grid w-full max-w-7xl items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
             <div className="animate-fade-right text-center lg:text-left">
-              <div className="animate-scale-in mb-6 inline-flex items-center gap-2 rounded-lg border border-primary/30 bg-white/80 px-4 py-2 text-sm font-semibold text-primary shadow-sm">
-                <MapPin size={16} />
-                Website Resmi Desa Molopatodu
-              </div>
 
               <h1 className="animate-fade-up animate-delay-100 mb-6 text-5xl font-bold leading-tight text-balance text-foreground md:text-7xl">
                 Selamat Datang di Desa Molopatodu
@@ -74,22 +70,7 @@ export default function Home() {
                 diakses.
               </p>
 
-              <div className="animate-fade-up animate-delay-300 flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
-                <Link
-                  href="/produk"
-                  className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-primary to-accent px-8 py-4 font-semibold text-primary-foreground transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/30"
-                >
-                  Lihat Produk
-                  <ArrowRight size={18} />
-                </Link>
-                <Link
-                  href="/berita"
-                  className="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-primary px-8 py-4 font-semibold text-primary transition-all duration-300 hover:bg-primary/10"
-                >
-                  Baca Berita
-                  <Newspaper size={18} />
-                </Link>
-              </div>
+             
             </div>
 
             <div className="animate-fade-left animate-delay-200 mx-auto w-full max-w-md overflow-hidden rounded-lg border border-primary/25 bg-white/90 shadow-xl shadow-primary/10 lg:max-w-none">
